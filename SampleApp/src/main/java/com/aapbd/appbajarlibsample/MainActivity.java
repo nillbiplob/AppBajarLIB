@@ -24,8 +24,11 @@ public class MainActivity extends AppCompatActivity {
         String sha= KeyHashManager.getKeyHash(con);
 
         /*
-        print at log
+        print at logThis is common
+
+
          */
+
 
 
         Print.message("Device SHA is ", sha);
