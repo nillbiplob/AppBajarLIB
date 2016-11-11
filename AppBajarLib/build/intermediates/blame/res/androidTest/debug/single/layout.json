@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/build/intermediates/res/merged/androidTest/debug/layout/commonweb.xml",
+        "source": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/build/intermediates/bundles/debug/res/layout/commonweb.xml"
+    },
+    {
+        "merged": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/build/intermediates/res/merged/androidTest/debug/layout/progress_hud.xml",
+        "source": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/build/intermediates/bundles/debug/res/layout/progress_hud.xml"
+    },
+    {
+        "merged": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/build/intermediates/res/merged/androidTest/debug/layout/busylayout.xml",
+        "source": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/build/intermediates/bundles/debug/res/layout/busylayout.xml"
+    }
+]

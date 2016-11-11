@@ -1,0 +1,89 @@
+[
+    {
+        "outputFile": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 48,
+                    "endOffset": 99
+                },
+                "from": {
+                    "file": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 17,
+                        "endColumn": 48,
+                        "endOffset": 61
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 104,
+                    "endLine": 9,
+                    "endColumn": 12,
+                    "endOffset": 390
+                },
+                "from": {
+                    "file": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/src/main/res/values/styles.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 186,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 472
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 395,
+                    "endLine": 12,
+                    "endColumn": 12,
+                    "endOffset": 550
+                },
+                "from": {
+                    "file": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/src/main/res/values/styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 510,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 665
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 555,
+                    "endLine": 21,
+                    "endColumn": 12,
+                    "endOffset": 1113
+                },
+                "from": {
+                    "file": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/src/main/res/values/styles.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 5,
+                        "startOffset": 677,
+                        "endLine": 28,
+                        "endColumn": 12,
+                        "endOffset": 1235
+                    }
+                }
+            }
+        ]
+    }
+]
