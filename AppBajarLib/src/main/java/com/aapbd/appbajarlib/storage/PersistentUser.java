@@ -6,7 +6,20 @@ import android.content.SharedPreferences.Editor;
 
 public class PersistentUser {
 
+    /*
+    Two common method singleTone method
+     */
+    private static PersistentUser ourInstance = new PersistentUser();
+
+    public static PersistentUser getInstance() {
+        return ourInstance;
+    }
+
+
+
     private static final String USERNAME = "username";
+    private static final String PHONENUMBER = "phonenumber";
+
     private static final String USERIMAGEURL = "USERIMAGEURL";
 
     private static final String FULLNAME = "fullname";
@@ -19,31 +32,47 @@ public class PersistentUser {
     private static final String PASSWORD = "password";
     private static final String PREFS_FILE_NAME = "AppPreferences";
 
-    public static String getAccessToken(final Context ctx) {
+    public  String getPhoneNumber(final Context ctx) {
+        return ctx.getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE)
+                .getString(PHONENUMBER, "");
+    }
+
+    public  String getAccessToken(final Context ctx) {
         return ctx.getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE)
                 .getString(ACCESSTOKEN, "");
     }
 
-    public static String getPassword(final Context ctx) {
+    public  String getPassword(final Context ctx) {
         return ctx.getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE)
                 .getString(PASSWORD, "");
     }
 
-    public static String getUserID(final Context ctx) {
+    public  String getUserID(final Context ctx) {
         return ctx.getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE)
                 .getString(USERID, "0");
     }
 
 
-    public static String getUserImage(final Context ctx) {
+    public  String getUserImage(final Context ctx) {
         return ctx.getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE)
                 .getString(USERIMAGEURL, "");
     }
+/*
+    * Langauge
+    */
+    public  void setPhonenumber(final Context ctx, final String data) {
+        final SharedPreferences prefs = ctx.getSharedPreferences(
+                PREFS_FILE_NAME, Context.MODE_PRIVATE);
+        final Editor editor = prefs.edit();
+        editor.putString(PHONENUMBER, data);
+        editor.commit();
+    }
+
 
     /*
     * Langauge
     */
-    public static void setUserImage(final Context ctx, final String data) {
+    public  void setUserImage(final Context ctx, final String data) {
         final SharedPreferences prefs = ctx.getSharedPreferences(
                 PREFS_FILE_NAME, Context.MODE_PRIVATE);
         final Editor editor = prefs.edit();
@@ -53,7 +82,7 @@ public class PersistentUser {
     /*
      * Langauge
      */
-    public static void setPassword(final Context ctx, final String data) {
+    public  void setPassword(final Context ctx, final String data) {
         final SharedPreferences prefs = ctx.getSharedPreferences(
                 PREFS_FILE_NAME, Context.MODE_PRIVATE);
         final Editor editor = prefs.edit();
@@ -64,7 +93,7 @@ public class PersistentUser {
     /*
      * set access token
      */
-    public static void setAccessToken(final Context ctx, final String token) {
+    public  void setAccessToken(final Context ctx, final String token) {
         final SharedPreferences prefs = ctx.getSharedPreferences(
                 PREFS_FILE_NAME, Context.MODE_PRIVATE);
         final Editor editor = prefs.edit();
@@ -75,7 +104,7 @@ public class PersistentUser {
     /*
      * Langauge
      */
-    public static void setUserID(final Context ctx, final String id) {
+    public  void setUserID(final Context ctx, final String id) {
         final SharedPreferences prefs = ctx.getSharedPreferences(
                 PREFS_FILE_NAME, Context.MODE_PRIVATE);
         final Editor editor = prefs.edit();
@@ -83,21 +112,21 @@ public class PersistentUser {
         editor.commit();
     }
 
-    public static String getUserName(final Context ctx) {
+    public  String getUserName(final Context ctx) {
         return ctx.getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE)
                 .getString(USERNAME, "");
     }
 
-    public static String getFullName(final Context ctx) {
+    public  String getFullName(final Context ctx) {
         return ctx.getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE)
                 .getString(FULLNAME, "");
     }
-    public static String getUserEmail(final Context ctx) {
+    public  String getUserEmail(final Context ctx) {
         return ctx.getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE)
                 .getString(USEREMAIL, "");
     }
 
-    public static String getUserDetails(final Context ctx) {
+    public  String getUserDetails(final Context ctx) {
         return ctx.getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE)
                 .getString(USERDETAILS, "");
     }
@@ -105,7 +134,7 @@ public class PersistentUser {
     /*
      * Langauge
      */
-    public static void setUserEmail(final Context ctx, final String data) {
+    public  void setUserEmail(final Context ctx, final String data) {
         final SharedPreferences prefs = ctx.getSharedPreferences(
                 PREFS_FILE_NAME, Context.MODE_PRIVATE);
         final Editor editor = prefs.edit();
@@ -116,7 +145,7 @@ public class PersistentUser {
     /*
      * Langauge
      */
-    public static void setUserName(final Context ctx, final String data) {
+    public  void setUserName(final Context ctx, final String data) {
         final SharedPreferences prefs = ctx.getSharedPreferences(
                 PREFS_FILE_NAME, Context.MODE_PRIVATE);
         final Editor editor = prefs.edit();
@@ -127,7 +156,7 @@ public class PersistentUser {
     /*
    * Langauge
    */
-    public static void setFullname(final Context ctx, final String data) {
+    public  void setFullname(final Context ctx, final String data) {
         final SharedPreferences prefs = ctx.getSharedPreferences(
                 PREFS_FILE_NAME, Context.MODE_PRIVATE);
         final Editor editor = prefs.edit();
@@ -137,7 +166,7 @@ public class PersistentUser {
     /*
      * Langauge
      */
-    public static void setUserDetails(final Context ctx, final String data) {
+    public  void setUserDetails(final Context ctx, final String data) {
         final SharedPreferences prefs = ctx.getSharedPreferences(
                 PREFS_FILE_NAME, Context.MODE_PRIVATE);
         final Editor editor = prefs.edit();
@@ -145,7 +174,7 @@ public class PersistentUser {
         editor.commit();
     }
 
-    public static void logOut(Context c) {
+    public  void logOut(Context c) {
 
         final SharedPreferences prefs = c.getSharedPreferences(PREFS_FILE_NAME,
                 Context.MODE_PRIVATE);
@@ -153,14 +182,14 @@ public class PersistentUser {
 
     }
 
-    public static void setLogin(Context c) {
+    public  void setLogin(Context c) {
 
         final SharedPreferences prefs = c.getSharedPreferences(PREFS_FILE_NAME,
                 Context.MODE_PRIVATE);
         prefs.edit().putBoolean("LOGIN", true).commit();
     }
 
-    public static boolean isLogged(Context c) {
+    public  boolean isLogged(Context c) {
 
         final SharedPreferences prefs = c.getSharedPreferences(PREFS_FILE_NAME,
                 Context.MODE_PRIVATE);
@@ -168,7 +197,7 @@ public class PersistentUser {
         return prefs.getBoolean("LOGIN", false);
     }
 
-    public static void resetAllData(Context c) {
+    public void resetAllData(Context c) {
 
         setUserName(c, "");
         setFullname(c, "");
@@ -177,6 +206,7 @@ public class PersistentUser {
         setUserDetails(c, "");
         setAccessToken(c, "");
         setPassword(c,"");
+        setPhonenumber(c,"");
 
     }
 
