@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/build/intermediates/res/merged/androidTest/debug/anim/spinner.xml",
-        "source": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/build/intermediates/bundles/debug/res/anim/spinner.xml"
+        "merged": "/Users/mehdi/Workspace/AndroidOthers/AppBajarLIB/AppBajarLib/build/intermediates/res/merged/androidTest/debug/anim/wave_scale.xml",
+        "source": "/Users/mehdi/Workspace/AndroidOthers/AppBajarLIB/AppBajarLib/build/intermediates/bundles/debug/res/anim/wave_scale.xml"
     },
     {
-        "merged": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/build/intermediates/res/merged/androidTest/debug/anim/wave_scale.xml",
-        "source": "/Reskin Workspace/Android/AppBajarLIB/AppBajarLib/build/intermediates/bundles/debug/res/anim/wave_scale.xml"
+        "merged": "/Users/mehdi/Workspace/AndroidOthers/AppBajarLIB/AppBajarLib/build/intermediates/res/merged/androidTest/debug/anim/spinner.xml",
+        "source": "/Users/mehdi/Workspace/AndroidOthers/AppBajarLIB/AppBajarLib/build/intermediates/bundles/debug/res/anim/spinner.xml"
     }
 ]

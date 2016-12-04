@@ -1,4 +1,9 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: "com.jfrog.bintray"
+
+group = 'pub.devrel'
+version = '0.1'
 
 android {
     compileSdkVersion "Google Inc.:Google APIs:23"
@@ -18,8 +23,66 @@ android {
 }
 
 dependencies {
-
-
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.google.code.gson:gson:2.3.+'
+}
+
+group = 'com.aapbd'
+version = '0.1'
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            name 'appbajar-lib'
+            description 'A wrapper for Android development'
+            url 'https://github.com/AAPBD/AppBajarLIB'
+            inceptionYear '2016'
+
+            packaging 'aar'
+            groupId 'com.aapbd'
+            artifactId 'appbajar-lib'
+            version '0.1'
+
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+            scm {
+                connection 'https://github.com/AAPBD/AppBajarLIB.git'
+                url 'https://github.com/AAPBD/AppBajarLIB'
+
+            }
+            developers {
+                developer {
+                    name 'javaorjava'
+                }
+            }
+        }
+    }
+}
+
+bintray {
+    user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('javaorjava')
+    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('dafb4e4c7f7d41c3399a0fd1ce13589ee658d4fa')
+    configurations = ['archives']
+    pkg {
+        repo = 'maven'
+        name = 'appbajar-lib'
+        userOrg = 'advancedappsbangladeshlimited'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
+        version {
+            name = '0.1'
+            desc = 'Gradle Bintray Plugin 1.0 final'
+            vcsTag = '0.1'
+            attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
+        }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
 }
