@@ -1,0 +1,85 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: "com.jfrog.bintray"
+
+android {
+    compileSdkVersion "Google Inc.:Google APIs:23"
+    buildToolsVersion '23.0.0'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 22
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.google.code.gson:gson:2.3.+'
+}
+
+group = 'com.aapbd' // TODO
+version = '1.0.0' // TODO
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            name 'appbajar-lib' // TODO
+            description 'A wrapper for Android development' // TODO
+            url 'https://github.com/AAPBD/AppBajarLIB' // TODO
+            inceptionYear '2016' // TODO
+
+            packaging 'aar'
+            groupId 'com.aapbd' // TODO
+            artifactId 'appbajar-lib' // TODO
+            version '1.0.0' // TODO
+
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+            scm {
+                connection 'https://github.com/AAPBD/AppBajarLIB.git' // TODO
+                url 'https://github.com/AAPBD/AppBajarLIB' // TODO
+
+            }
+            developers {
+                developer {
+                    name 'javaorjava' // TODO
+                }
+            }
+        }
+    }
+}
+
+bintray {
+    user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('javaorjava')
+    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('dafb4e4c7f7d41c3399a0fd1ce13589ee658d4fa')
+    configurations = ['archives']
+    pkg {
+        repo = 'maven' // TODO
+        name = 'appbajar-lib' // TODO
+        userOrg = 'advancedappsbangladeshlimited' // TODO
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
+        version {
+            name = '0.1'
+            desc = 'Gradle Bintray Plugin 1.0 final'
+            vcsTag = '0.1'
+            attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
+        }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}

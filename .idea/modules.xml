@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AppBajarLIB.iml" filepath="$PROJECT_DIR$/AppBajarLIB.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AppBajarLib/AppBajarLib.iml" filepath="$PROJECT_DIR$/AppBajarLib/AppBajarLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/SampleApp/SampleApp.iml" filepath="$PROJECT_DIR$/SampleApp/SampleApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appbajar-lib/appbajar-lib.iml" filepath="$PROJECT_DIR$/appbajar-lib/appbajar-lib.iml" />
     </modules>
   </component>
 </project>
