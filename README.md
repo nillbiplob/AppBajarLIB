@@ -1,11 +1,10 @@
 Guys,
+
 Hope you are well. Finally the AppBajarLib is at Github. But need a person who can help me to prepare SDK Documentation.
 
 I think, it will save 50% development time by re-using common actions/codes.
 
 
-I will share the Gradle/JCenter link within next 4/5 days.
-https://github.com/AAPBD/AppBajarLIB
 
 
 Example:-
