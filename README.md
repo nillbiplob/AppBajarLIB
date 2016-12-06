@@ -7,14 +7,30 @@ We will continue our effort and have plan to make this library as official SDK o
 
 **HOW TO USE:-
 
+
 Add following line into build.gradle file and sync.
 
-compile 'com.aapbd.appbajar-lib:library:1.0.2@aar'
-**
+
+buildscript {
+
+    // following lines/block is important for AppBajar Library
+    
+    repositories {
+        mavenCentral()
+    }
+
+}
+
+
+compile 'com.aapbd:appbajar-lib:1.0.2'
 
 
 **Example:-
 **
+
+
+
+
 To make Activity full screen, just call
 DisplayUtils.fullScreen(youractivityname);
 
@@ -29,6 +45,9 @@ PersistentUser.getInstance().setLogin(Context c);
 
 **Youtube Channel for tutorial series:
 **
+
+
+
 https://www.youtube.com/channel/UCACWA2yNIGZe7SxiTWBAW4Q
 
 NOTHING IS NEW BUT EVERYTHING IS REDEFINED. It's an output of 6 years work!
