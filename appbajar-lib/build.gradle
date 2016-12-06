@@ -63,6 +63,9 @@ install {
 }
 
 bintray {
+
+    // Done by Mehdi vai.
+
     user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('javaorjava') // TODO - once for the first time
     key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('dafb4e4c7f7d41c3399a0fd1ce13589ee658d4fa') // TODO - once for the first time
     configurations = ['archives']
