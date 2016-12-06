@@ -3,6 +3,7 @@ package com.aapbd.appbajarlibsample;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 import com.aapbd.appbajarlib.encryption.KeyHashManager;
 import com.aapbd.appbajarlib.print.Print;
@@ -10,6 +11,8 @@ import com.aapbd.appbajarlib.print.Print;
 public class MainActivity extends AppCompatActivity {
 
     private Context con;
+
+    private TextView resultView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         Print.message("Device SHA is ", sha);
+
+        resultView=(TextView)findViewById(R.id.resultview);
+
+        resultView.setText("Device SHA \n"+sha);
+
+
 
     }
 }
