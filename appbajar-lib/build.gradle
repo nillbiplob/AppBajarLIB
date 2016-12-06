@@ -24,8 +24,9 @@ dependencies {
     compile 'com.google.code.gson:gson:2.3.+'
 }
 
+def binTrayVersion = '1.0.2' // TODO - for each update
 group = 'com.aapbd' // TODO
-version = '1.0.0' // TODO
+version = binTrayVersion
 
 install {
     repositories.mavenInstaller {
@@ -38,7 +39,7 @@ install {
             packaging 'aar'
             groupId 'com.aapbd' // TODO
             artifactId 'appbajar-lib' // TODO
-            version '1.0.0' // TODO
+            version binTrayVersion
 
             licenses {
                 license {
@@ -62,20 +63,20 @@ install {
 }
 
 bintray {
-    user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('javaorjava')
-    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('dafb4e4c7f7d41c3399a0fd1ce13589ee658d4fa')
+    user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('javaorjava') // TODO - once for the first time
+    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('dafb4e4c7f7d41c3399a0fd1ce13589ee658d4fa') // TODO - once for the first time
     configurations = ['archives']
     pkg {
         repo = 'maven' // TODO
         name = 'appbajar-lib' // TODO
         userOrg = 'advancedappsbangladeshlimited' // TODO
-        licenses = ['Apache-2.0']
+        licenses = ['Apache-2.0'] // TODO
         vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
         version {
-            name = '0.1'
-            desc = 'Gradle Bintray Plugin 1.0 final'
-            vcsTag = '0.1'
-            attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
+            name = binTrayVersion // TODO
+            desc = 'AppBajar latest build' // TODO
+            vcsTag = binTrayVersion // TODO
+            attributes = ['gradle-plugin': 'com.aapbd:appbajar-lib'] // TODO
         }
     }
 }
