@@ -22,7 +22,7 @@ buildscript {
 }
 
 
-compile 'com.aapbd:appbajar-lib:1.0.2'
+implementation 'com.aapbd:appbajar-lib:1.0.2'
 
 
 **Example:-
