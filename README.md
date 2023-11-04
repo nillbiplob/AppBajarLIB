@@ -60,7 +60,3 @@ We welcome contributions and suggestions from the developer community. Feel free
 Nothing is entirely new, but everything in AppBajarLib is redefined and optimized. It's the result of six years of dedicated work!
 
 We look forward to seeing what you can create with AppBajarLib. Happy coding!
-
----
-
-You can use this text as a starting point for your GitHub repository's README, customizing it to your specific needs.
